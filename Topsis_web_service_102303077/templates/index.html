@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TOPSIS Web Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        .container {
+            width: 420px;
+            background: white;
+            padding: 25px;
+            margin: 80px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #ff9800;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e68900;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>TOPSIS Web Service</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <label>Upload CSV File</label>
+        <input type="file" name="file" required>
+
+        <label>Weights (comma separated)</label>
+        <input type="text" name="weights" placeholder="1,1,1,1" required>
+
+        <label>Impacts (+ or -)</label>
+        <input type="text" name="impacts" placeholder="+,-,+,+" required>
+
+        <label>Email ID</label>
+        <input type="email" name="email" placeholder="example@gmail.com" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="note">
+        • Result will be sent to your email<br>
+        • Weights & impacts must match criteria count
+    </div>
+</div>
+
+</body>
+</html>
