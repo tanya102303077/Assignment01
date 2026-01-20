@@ -46,6 +46,8 @@ The application is developed using **Flask** and provides a simple web interface
 
 ## Sample Input CSV
 
+## Sample Input CSV
+
 ```csv
 Fund Name,P1,P2,P3,P4
 M1,0.67,0.45,6.5,42.6
@@ -53,75 +55,24 @@ M2,0.60,0.36,3.6,53.3
 M3,0.82,0.67,3.8,63.1
 M4,0.60,0.36,3.5,69.2
 M5,0.76,0.58,4.8,43.0
+```
+---
 Output Description
 The output includes:
-
-Original input data
-
-TOPSIS Score for each alternative
-
-Rank based on TOPSIS score
-(Higher score indicates better rank)
-
+-Original input data
+-TOPSIS Score for each alternative
+-Rank based on TOPSIS score(Higher score indicates better rank)
+---
 The result is:
-
-Displayed on the web page
-
-Optionally sent to a user-provided email ID
-
+-Displayed on the web page
+-Optionally sent to a user-provided email ID
+---
 Application Workflow
-User uploads a CSV file
+-User uploads a CSV file
+-User enters weights and impacts
+-Inputs are validated
+-TOPSIS algorithm is applied
+-Result is generated and displayed
+-User may choose to send result via email
 
-User enters weights and impacts
 
-Inputs are validated
-
-TOPSIS algorithm is applied
-
-Result is generated and displayed
-
-User may choose to send result via email
-
-Folder Structure
-pgsql
-Copy code
-Topsis_web_service_102303077/
-│
-├── app.py
-├── topsis_logic.py
-├── requirements.txt
-├── templates/
-│   ├── index.html
-│   └── result.html
-├── uploads/
-├── outputs/
-└── README.md
-How to Run Locally
-bash
-Copy code
-pip install -r requirements.txt
-python app.py
-Open in browser:
-
-cpp
-Copy code
-http://127.0.0.1:5000
-Deployment
-The application is deployed as a Flask Web Service
-
-Hosted using Render
-
-Environment variables are used for email configuration
-
-Runs on a production WSGI server
-
-Validations Implemented
-CSV file format validation
-
-Numeric validation for weights
-
-Length matching of weights and impacts
-
-Impact symbol validation (+ or -)
-
-Email format validation
