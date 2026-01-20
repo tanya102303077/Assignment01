@@ -112,7 +112,11 @@ def index():
             with open(output_path, "rb") as f:
                 msg.attach("result.csv", "text/csv", f.read())
 
-            mail.send(msg)
+           try:
+             mail.send(msg)
+        except Exception as e:
+            print("Email failed:", e)
+
 
         except Exception as e:
             print("Email error:", e)
