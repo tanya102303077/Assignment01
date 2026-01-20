@@ -3,8 +3,8 @@
 
 ## Project Description
 
-**For:** Project-1 (UCS633 / UCS654 – Predictive Analytics)  
-**Submitted by:** Tanya  
+**For:** Project-1 (UCS654 – Predictive Analytics)  
+**Submitted by:** Tanya Mediratta
 **Roll Number:** 102303077  
 
 **Topsis-Tanya-102303077** is a Python package designed to solve **Multiple Criteria Decision Making (MCDM)** problems using the **Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS)** method.
