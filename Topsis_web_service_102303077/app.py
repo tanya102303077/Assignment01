@@ -21,6 +21,8 @@ app.config["MAIL_USE_TLS"] = True
 app.config["MAIL_USERNAME"] = os.environ.get("MAIL_USERNAME")
 app.config["MAIL_PASSWORD"] = os.environ.get("MAIL_PASSWORD")
 app.config["MAIL_DEFAULT_SENDER"] = os.environ.get("MAIL_USERNAME")
+app.config["MAIL_TIMEOUT"] = 30
+
 
 mail = Mail(app)
 
@@ -70,7 +72,7 @@ def send_email():
     msg = Message(
         subject="TOPSIS Result",
         recipients=[email],
-        sender=app.config["MAIL_DEFAULT_SENDER"],
+        sender=app.config["MAIL_USERNAME"],
         body="Please find the attached TOPSIS result."
     )
 
