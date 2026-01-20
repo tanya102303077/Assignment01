@@ -57,17 +57,17 @@ M4,0.60,0.36,3.5,69.2
 M5,0.76,0.58,4.8,43.0
 ```
 ---
-Output Description
+##Output Description
 The output includes:
 -Original input data
 -TOPSIS Score for each alternative
 -Rank based on TOPSIS score(Higher score indicates better rank)
 ---
-The result is:
+##The result is:
 -Displayed on the web page
 -Optionally sent to a user-provided email ID
 ---
-Application Workflow
+##Application Workflow
 -User uploads a CSV file
 -User enters weights and impacts
 -Inputs are validated
