@@ -106,5 +106,4 @@ The output CSV file contains:
 [MIT License](https://opensource.org/licenses/MIT)
 ```
 
----
 
